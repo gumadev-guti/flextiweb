@@ -1,0 +1,252 @@
+/* styles.css */
+
+/* Reseteo de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    background-color: #cfc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.header{
+    min-width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header>.principal-navbar{
+    background-color: #283;
+}
+
+.header>.principal-navbar>.principal-navbar-ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo{
+    max-width: 80px;
+    margin-right: 10vw;
+    filter: drop-shadow(#030 2px 2px 5px);
+}
+
+.header>.principal-navbar>.principal-navbar-ul a{
+    text-decoration: none;
+    color: #eee;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.welcome{
+    border-radius: 8px;
+    box-shadow: #0137 5px 5px 20px;
+    margin: auto;
+    padding: 8px;
+    background-color: #eee;
+    width: 95%;
+    max-width: 1800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+h1>span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: #353 1px 2px 5px;
+}
+
+.welcome-img{
+    background: url(Assets/Pictures/horny.jpg);
+    margin: 10px 0;
+    border-radius: 25px;
+    background-size: cover;
+    background-position:center;
+    width: 95%;
+    height: 80vh;
+}
+
+.welcome-text{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0002;
+    border-radius: 20px;
+    box-shadow: #0005 5px 5px 10px;
+}
+
+.welcome p{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+.welcome .leter{
+    font-family: 'Courier New', Courier, monospace;
+    color: #050;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.welcome a{
+    font-size: 20px;
+    background-color: #053a;
+    color: #eee;
+    padding: 5px;
+    margin: 10px;
+    box-shadow: #363 2px 2px 5px;
+    border-radius: 10px;
+}
+
+
+.catalogo{
+    border-radius: 8px;
+    box-shadow: #0137 5px 5px 20px;
+    margin: auto;
+    padding: 8px;
+    background-color: #eee;
+    width: 95%;
+    max-width: 1800px;
+}
+
+.catalogo>h2{
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.catalogo>.productos{
+    background-color: #eee;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.catalogo>.productos>.card{
+    border-radius: 10px;
+    background-color: #cfc5;
+    margin: 10px;
+    box-shadow: #0137 5px 5px 10px;
+    min-height: 150px;
+    flex-shrink: 10px;
+    flex-basis: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.catalogo>.productos>.card>img{
+    max-width: 100%;
+    filter: drop-shadow(#0005 2px 2px 5px);
+}
+
+.catalogo>.productos>.card>a{
+    text-decoration: none;
+    background-color: #023a;
+    color: #eee;
+    padding: 5px;
+    margin: 5px;
+    box-shadow: #333 2px 2px 5px;
+    border-radius: 10px;
+}
+
+footer{
+    padding: 10px 2px;
+    background-color: #333;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a{
+    font-size: 20px;
+    color: #eee;
+    display: flex;
+    align-items: center;
+}
+
+footer a img{
+    width: 45px;
+    filter: drop-shadow(#eee5 0 0 5px);
+}
+
+.information{
+    display: flex;
+}
+
+
+@media (min-width:500px) {
+    .catalogo>.productos>.card{
+        flex-basis: 200px;
+    }
+
+    .header>.principal-navbar>.principal-navbar-ul>img{
+        max-width: 80px;
+        margin-right: 20vw;
+    }
+
+    .header>.principal-navbar>.principal-navbar-ul a{
+        font-size: 20px;
+    }
+
+    .welcome{
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .welcome-img{
+        width: 45%;
+        height: 60vh;
+        background-position: top;
+    }
+    
+    .welcome-text{
+        width: 45%;
+        background-color: #0002;
+        border-radius: 0 50px 25px 0;
+    }
+}
+
+@media (max-width:375px) {
+    .catalogo>.productos>.card{
+        flex-basis: 250px;
+    }
+
+    .information{
+        display: none;
+    }
+
+    footer a{
+        font-size: 15px;
+    }
+    
+    footer a img{
+        width: 25px;
+    }
+}
