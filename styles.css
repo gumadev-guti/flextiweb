@@ -150,6 +150,7 @@ h1>span{
 
 .catalogo>.productos>.card{
     border-radius: 10px;
+    text-align: center;
     background-color: #cfc5;
     margin: 10px;
     box-shadow: #0137 5px 5px 10px;
@@ -185,7 +186,6 @@ footer{
 }
 
 footer a{
-    font-size: 20px;
     color: #eee;
     display: flex;
     align-items: center;
@@ -202,8 +202,16 @@ footer a img{
 
 
 @media (min-width:500px) {
+    body{
+        font-size: 24px;
+    }
+
+    footer{
+        font-size: 24px;
+    }
+
     .catalogo>.productos>.card{
-        flex-basis: 200px;
+        flex-basis: 300px;
     }
 
     .header>.principal-navbar>.principal-navbar-ul>img{
@@ -221,9 +229,10 @@ footer a img{
     }
 
     .welcome-img{
-        width: 45%;
-        height: 60vh;
+        width: 35%;
+        height: 80vh;
         background-position: top;
+        margin-right: 10px;
     }
     
     .welcome-text{
@@ -235,7 +244,7 @@ footer a img{
 
 @media (max-width:375px) {
     .catalogo>.productos>.card{
-        flex-basis: 250px;
+        flex-basis: 150px;
     }
 
     .information{
